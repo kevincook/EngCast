@@ -1,0 +1,18 @@
+<p>
+  <b>Number:</b>
+  <%=h @week.number %>
+</p>
+
+<p>
+  <b>Startdate:</b>
+  <%=h @week.startdate %>
+</p>
+
+<p>
+  <b>Enddate:</b>
+  <%=h @week.enddate %>
+</p>
+
+
+<%= link_to 'Edit', edit_week_path(@week) %> |
+<%= link_to 'Back', weeks_path %>

@@ -1,0 +1,221 @@
+raghu:
+    lastname: Balasubramani
+    firstname: Raghu
+    role: SW
+    manager: richard
+
+boudreaux:    
+    lastname: Boudreaux
+    firstname: Mark
+    role: SW
+    manager: richard
+    
+chakkingal:
+    lastname: Chakkingal
+    firstname: Harish
+    role: SW
+    manager: richard
+    
+chebiyyam:
+    lastname: Chebiyyam
+    firstname: Gopi Krishna
+    role: SW
+    manager: richard
+    
+collins:
+    lastname: Collins
+    firstname: Charles
+    role: SW
+    manager: richard
+    
+joy:
+    lastname: Joy
+    firstname: Thomas
+    role: SW
+    manager: richard
+    
+lewis:
+    lastname: Lewis
+    firstname: David
+    role: SW
+    manager: richard
+    
+marimuthu:
+    lastname: Marimuthu
+    firstname: Jeyasekar
+    role: SW
+    manager: richard
+    
+mathews:
+    lastname: Mathews
+    firstname: Rohit
+    role: SW
+    manager: richard
+    
+morris:
+    lastname: Morris
+    firstname: Stan
+    role: SW
+    manager: richard
+    
+muralidhar:
+    lastname: Muralidhar
+    firstname: Pavitra
+    role: SW
+    manager: richard
+    
+nuwal:
+    lastname: Nuwal
+    firstname: Trilok
+    role: SW
+    manager: richard
+    
+simone:
+    lastname: Simone
+    firstname: Ken
+    role: SW
+    manager: richard
+    
+smith:
+    lastname: Smith
+    firstname: Eddie
+    role: SW
+    manager: richard
+    
+stalnaker:
+    lastname: Stalnaker
+    firstname: Rob
+    role: SW
+    manager: richard
+    
+thomas:
+    lastname: Thomas
+    firstname: Martin
+    role: SW
+    manager: richard
+    
+dick:
+    lastname: Whitehurst
+    firstname: Dick
+    role: SW
+    manager: richard
+    
+whitehurst:
+    lastname: Whitehurst
+    firstname: Paul
+    role: SW
+    manager: richard
+    
+ahmed:
+    lastname: Ahmed
+    firstname: Mukthar
+    role: QA
+    manager: matt
+    
+balachandran:
+    lastname: Balachandran
+    firstname: Hema
+    role: QA
+    manager: matt
+    
+balyam:
+    lastname: Balyam
+    firstname: Usha
+    role: QA
+    manager: matt
+    
+dongre:
+    lastname: Dongre
+    firstname: Dileep
+    role: QA
+    manager: matt
+    
+ham:
+    lastname: Ham
+    firstname: Michael
+    role: QA
+    manager: matt
+    
+joshi:
+    lastname: Joshi
+    firstname: Varsha
+    role: QA
+    manager: matt
+    
+krisnamurthy:
+    lastname: Krishnamurthy
+    firstname: Venkat
+    role: QA
+    manager: matt
+    
+kumar:
+    lastname: Kumar Gaddala
+    firstname: Satish
+    role: QA
+    manager: matt
+    
+randy:
+    lastname: Morris
+    firstname: Randy
+    role: QA
+    manager: matt
+    
+nagraj:
+    lastname: Nagaraj
+    firstname: Santosh
+    role: QA
+    manager: matt
+    
+palada:
+    lastname: Palada
+    firstname: Kalyani
+    role: QA
+    manager: matt
+    
+quintana:
+    lastname: Quintana
+    firstname: Alex
+    role: QA
+    manager: matt
+    
+rajasekhar:
+    lastname: Rajasekhar
+    firstname: Ashish
+    role: QA
+    manager: matt
+    
+setty:
+    lastname: Setty
+    firstname: Kishore
+    role: QA
+    manager: matt
+    
+shankar:
+    lastname: Shankar
+    firstname: Bindu
+    role: QA
+    manager: matt
+    
+singh:
+    lastname: Singh
+    firstname: Prashant
+    role: QA
+    manager: matt
+    
+srivastava:
+    lastname: Srivastava
+    firstname: Rajat
+    role: QA
+    manager: matt
+    
+uruma:
+    lastname: Uruma
+    firstname: Jaya
+    role: QA
+    manager: matt
+    
+washington:
+    lastname: Washington
+    firstname: Alton
+    role: QA
+    manager: matt

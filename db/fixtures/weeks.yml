@@ -1,0 +1,319 @@
+1:
+    number: 1
+    startdate: 2009-01-01
+    enddate: 2009-01-03
+    day_count: 0
+    
+2:
+    number: 2
+    startdate: 2009-01-04
+    enddate: 2009-01-10
+    day_count: 4
+    
+3:
+    number: 3
+    startdate: 2009-01-11
+    enddate: 2009-01-17
+    day_count: 4
+    
+4:
+    number: 4
+    startdate: 2009-01-18
+    enddate: 2009-01-24
+    day_count: 4
+    
+5:
+    number: 5
+    startdate: 2009-01-25
+    enddate: 2009-01-31
+    day_count: 4
+    
+6:
+    number: 6
+    startdate: 2009-02-01
+    enddate: 2009-02-07
+    day_count: 4
+    
+7:
+    number: 7
+    startdate: 2009-02-08
+    enddate: 2009-02-14
+    day_count: 4
+    
+8:
+    number: 8
+    startdate: 2009-02-15
+    enddate: 2009-02-21
+    day_count: 4
+    
+9:
+    number: 9
+    startdate: 2009-02-22
+    enddate: 2009-02-28
+    day_count: 4
+    
+10:
+    number: 10
+    startdate: 2009-03-01
+    enddate: 2009-03-07
+    day_count: 4
+    
+11:
+    number: 11
+    startdate: 2009-03-08
+    enddate: 2009-03-14
+    day_count: 4
+    
+12:
+    number: 12
+    startdate: 2009-03-15
+    enddate: 2009-03-21
+    day_count: 4
+
+13:
+    number: 13
+    startdate: 2009-03-22
+    enddate: 2009-03-28
+    day_count: 4
+    
+14:
+    number: 14
+    startdate: 2009-03-29
+    enddate: 2009-04-04
+    day_count: 4
+    
+15:
+    number: 15
+    startdate: 2009-04-05
+    enddate: 2009-04-11
+    day_count: 4
+    
+16:
+    number: 16
+    startdate: 2009-04-12
+    enddate: 2009-04-18
+    day_count: 4
+    
+17:
+    number: 17
+    startdate: 2009-04-19
+    enddate: 2009-04-25
+    day_count: 4
+    
+18:
+    number: 18
+    startdate: 2009-04-26
+    enddate: 2009-05-02
+    day_count: 4
+    
+19:
+    number: 19
+    startdate: 2009-05-03
+    enddate: 2009-05-09
+    day_count: 4
+    
+20:
+    number: 20
+    startdate: 2009-05-10
+    enddate: 2009-05-16
+    day_count: 4
+    
+21:
+    number: 21
+    startdate: 2009-05-17
+    enddate: 2009-05-23
+    day_count: 4
+    
+22:
+    number: 22
+    startdate: 2009-05-24
+    enddate: 2009-05-30
+    day_count: 4
+    
+23:
+    number: 23
+    startdate: 2009-05-31
+    enddate: 2009-06-06
+    day_count: 4
+    
+24:
+    number: 24
+    startdate: 2009-06-07
+    enddate: 2009-06-13
+    day_count: 4
+    
+25:
+    number: 25
+    startdate: 2009-06-14
+    enddate: 2009-06-20
+    day_count: 4
+    
+26:
+    number: 26
+    startdate: 2009-06-21
+    enddate: 2009-06-27
+    day_count: 4
+    
+27:
+    number: 27
+    startdate: 2009-06-28
+    enddate: 2009-07-04
+    day_count: 4
+    
+28:
+    number: 28
+    startdate: 2009-07-05
+    enddate: 2009-07-11
+    day_count: 4
+    
+29:
+    number: 29
+    startdate: 2009-07-12
+    enddate: 2009-07-18
+    day_count: 4
+    
+30:
+    number: 30
+    startdate: 2009-07-19
+    enddate: 2009-07-25
+    day_count: 4
+    
+31:
+    number: 31
+    startdate: 2009-07-26
+    enddate: 2009-08-01
+    day_count: 4
+    
+32:
+    number: 32
+    startdate: 2009-08-02
+    enddate: 2009-08-08
+    day_count: 4
+    
+33:
+    number: 33
+    startdate: 2009-08-09
+    enddate: 2009-08-15
+    day_count: 4
+    
+34:
+    number: 34
+    startdate: 2009-08-16
+    enddate: 2009-08-22
+    day_count: 4
+    
+35:
+    number: 35
+    startdate: 2009-08-23
+    enddate: 2009-08-29
+    day_count: 4
+    
+36:
+    number: 36
+    startdate: 2009-08-30
+    enddate: 2009-09-05
+    day_count: 4
+    
+37:
+    number: 37
+    startdate: 2009-09-06
+    enddate: 2009-09-12
+    day_count: 4
+    
+38:
+    number: 38
+    startdate: 2009-09-13
+    enddate: 2009-09-19
+    day_count: 4
+    
+39:
+    number: 39
+    startdate: 2009-09-20
+    enddate: 2009-09-26
+    day_count: 4
+    
+40:
+    number: 40
+    startdate: 2009-09-27
+    enddate: 2009-10-03
+    day_count: 4
+    
+41: 
+    number: 41
+    startdate: 2009-10-04
+    enddate: 2009-10-10
+    day_count: 4
+    
+42:
+    number: 42
+    startdate: 2009-10-11
+    enddate: 2009-10-17
+    day_count: 4
+    
+43:
+    number: 43
+    startdate: 2009-10-18
+    enddate: 2009-10-24
+    day_count: 4
+    
+44:
+    number: 44
+    startdate: 2009-10-25
+    enddate: 2009-10-31
+    day_count: 4
+    
+45:
+    number: 45
+    startdate: 2009-11-01
+    enddate: 2009-11-07
+    day_count: 4
+    
+46:
+    number: 46
+    startdate: 2009-11-08
+    enddate: 2009-11-14
+    day_count: 4
+    
+47:
+    number: 47
+    startdate: 2009-11-15
+    enddate: 2009-11-21
+    day_count: 4
+    
+48:
+    number: 48
+    startdate: 2009-11-22
+    enddate: 2009-11-28
+    day_count: 4
+    
+49:
+    number: 49
+    startdate: 2009-11-29
+    enddate: 2009-12-05
+    day_count: 4
+    
+50:
+    number: 50
+    startdate: 2009-12-06
+    enddate: 2009-12-12
+    day_count: 4
+    
+51:
+    number: 51
+    startdate: 2009-12-13
+    enddate: 2009-12-19
+    day_count: 4
+    
+52:
+    number: 52
+    startdate: 2009-12-20
+    enddate: 2009-12-26
+    day_count: 4
+    
+53:
+    number: 53
+    startdate: 2009-12-27
+    enddate: 2010-01-02
+    day_count: 4
+    
+        

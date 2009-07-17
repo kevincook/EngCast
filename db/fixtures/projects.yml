@@ -1,0 +1,48 @@
+albert:
+    name: Albert
+    description:
+        
+architecture:
+    name: Architecture
+    description:
+        
+automation:
+    name: Automation
+    description:
+        
+berkeley:
+    name: Berkeley
+    description:
+        
+content:
+    name: Content
+    description:
+        
+feynman:
+    name: Feynman
+    description:
+        
+isaac:
+    name: Isaac
+    description:
+        
+jeev:
+    name: Jeev
+    description:
+        
+jimmy:
+    name: Jimmy
+    description:
+        
+mcafee_agent:
+    name: McAfee Agent
+    description:
+        
+preventsys:
+    name: Preventsys
+    description:
+        
+sustaining:
+    name: Sustaining
+    description:
+    
