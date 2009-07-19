@@ -1,0 +1,14 @@
+%h1 Listing Assignments
+- Time::DATE_FORMATS[:week] = "%m/%d/%y" 
+%table
+  %tr
+    %th Engineer
+    - @weeks.each do |week|
+      %th= week.startdate.to_s(:week)
+  -@assignments.each do |record|
+    %tr
+      %td= link_to "#{record[:name]}", engineer_path(record[:current_engineer])
+      - record[:week_data].each do |week|
+        %td= project_link(week[:name], week[:id])
+%br
+= link_to 'New Assignment', new_assignment_path

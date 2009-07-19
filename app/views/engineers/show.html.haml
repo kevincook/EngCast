@@ -1,0 +1,7 @@
+%h2 Engineer Details
+%p
+  %b Name:
+  = @engineer.display_name
+  
+= link_to 'Edit', edit_engineer_path(@engineer)
+= link_to 'Back', engineers_path

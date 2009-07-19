@@ -1,0 +1,17 @@
+- form_for @assignment do |f|
+  = f.error_messages
+  
+  .form_row
+    .label= f.label :first_name
+    = f.collection_select :project_id, @projects, :id, :name, :options => {:prompt => "-Select a project", :class => "project"}
+    
+  .form_row
+    .label= f.label :engineer
+    = f.collection_select :engineer_id, @engineers, :id, :display_name, :options => {:prompt => "-Select an engineer", :class => "engineer"}
+    
+  .form_row
+    .label= f.label :week
+    = f.collection_select :week_id, @weeks, :id, :startdate, :options => {:prompt => "-Select a week", :class => "week"}
+
+  .form_row
+    = f.submit button_text

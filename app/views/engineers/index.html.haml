@@ -1,0 +1,17 @@
+%h2 Listing Engineers
+%table
+  %tr
+    %th Name
+    %th Role
+    %th Actions
+  -@engineers.each do |engineer|
+    %tr
+      %td= engineer.display_name
+      %td= engineer.role
+      %td 
+        = link_to 'Show', engineer 
+        = link_to 'Edit', edit_engineer_path(engineer) 
+        = link_to 'Destroy', engineer, :confirm => 'Are you sure?', :method => :delete
+      
+%br
+=link_to 'New Engineer', new_engineer_path
