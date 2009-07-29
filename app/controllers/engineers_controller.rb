@@ -2,11 +2,12 @@ class EngineersController < ApplicationController
   # GET /engineers
   # GET /engineers.xml
   def index
-    @engineers = Engineer.find(:all, :order=>'lastname')
+    @engineers = Engineer.grid_data
 
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @engineers }
+      format.js { render :json => @engineers }
     end
   end
 
@@ -29,6 +30,7 @@ class EngineersController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @engineer }
+      format.js { render :json => @engineer }
     end
   end
 
@@ -40,16 +42,14 @@ class EngineersController < ApplicationController
   # POST /engineers
   # POST /engineers.xml
   def create
-    @engineer = Engineer.new(params[:engineer])
-
     respond_to do |format|
-      if @engineer.save
-        flash[:notice] = 'Engineer was successfully created.'
-        format.html { redirect_to(@engineer) }
-        format.xml  { render :xml => @engineer, :status => :created, :location => @engineer }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @engineer.errors, :status => :unprocessable_entity }
+      format.js do
+        @engineer = Engineer.new(ActiveSupport::JSON.decode(params[:rows]))
+        if @engineer.save
+          render :json => { :success => true, :message => "Created new Engineer #{@engineer.id}", :data => @engineer}
+        else
+          render :json => { :message => "Failed to create engineer"}
+        end
       end
     end
   end
@@ -60,13 +60,12 @@ class EngineersController < ApplicationController
     @engineer = Engineer.find(params[:id])
 
     respond_to do |format|
-      if @engineer.update_attributes(params[:engineer])
-        flash[:notice] = 'Engineer was successfully updated.'
-        format.html { redirect_to(@engineer) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @engineer.errors, :status => :unprocessable_entity }
+      format.js do
+        if @engineer.update_attributes(ActiveSupport::JSON.decode(params[:rows]))
+          render :json => { :success => true, :message => "Updated Engineer #{@engineer.id}", :data => @engineer}
+        else
+          render :json => {:message => "Failed to update Engineer"}
+        end
       end
     end
   end
@@ -75,11 +74,17 @@ class EngineersController < ApplicationController
   # DELETE /engineers/1.xml
   def destroy
     @engineer = Engineer.find(params[:id])
-    @engineer.destroy
-
+    
     respond_to do |format|
-      format.html { redirect_to(engineers_url) }
-      format.xml  { head :ok }
+      if @engineer.destroy
+        format.html { redirect_to(engineers_url) }
+        format.xml  { head :ok }
+        format.js { render :json => {:success => true, :message => "Destroyed Engineer #{@engineer.id}"}}
+      else
+        format.html { redirect_to(engineers_url) }
+        format.xml  { head :ok }
+        format.js { render :json => {:message => "Failed to destroy user"}}   
+      end     
     end
   end
 end
