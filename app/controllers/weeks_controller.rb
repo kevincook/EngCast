@@ -1,44 +1,15 @@
 class WeeksController < ApplicationController
-  # GET /weeks
-  # GET /weeks.xml
+  # GET /weeks.js
   def index
-    @weeks = Week.all
+    @weeks = Week.grid_data
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @weeks }
+      format.js { render :json => @weeks }
     end
   end
 
-  # GET /weeks/1
-  # GET /weeks/1.xml
-  def show
-    @week = Week.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @week }
-    end
-  end
-
-  # GET /weeks/new
-  # GET /weeks/new.xml
-  def new
-    @week = Week.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @week }
-    end
-  end
-
-  # GET /weeks/1/edit
-  def edit
-    @week = Week.find(params[:id])
-  end
-
-  # POST /weeks
-  # POST /weeks.xml
+  # POST /weeks.js
   def create
     @week = Week.new(params[:week])
 
@@ -54,8 +25,7 @@ class WeeksController < ApplicationController
     end
   end
 
-  # PUT /weeks/1
-  # PUT /weeks/1.xml
+  # PUT /weeks/1.js
   def update
     @week = Week.find(params[:id])
 
@@ -71,8 +41,7 @@ class WeeksController < ApplicationController
     end
   end
 
-  # DELETE /weeks/1
-  # DELETE /weeks/1.xml
+  # DELETE /weeks/1.js
   def destroy
     @week = Week.find(params[:id])
     @week.destroy

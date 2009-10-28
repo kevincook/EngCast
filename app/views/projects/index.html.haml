@@ -1,15 +1,9 @@
-%h2 Listing Projects
-%table
-  %tr
-    %th Name
-    %th Actions
-    
-  - @projects.each do |project|
-    %tr
-      %td= project.name
-      %td
-        = link_to 'Show', project
-        = link_to 'Edit', edit_project_path(project)
-        = link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete
-%br
-=link_to 'New Project', new_project_path
+-content_for :jsinclude do
+  = javascript_include_tag 'projects/project_grid.js'
+  = javascript_include_tag 'extjs/RowEditor.js'
+  = javascript_include_tag 'MenuPanel.js'
+  = javascript_include_tag 'projects/MainView.js'
+  = stylesheet_link_tag 'engineergrid.css'
+
+#header{:style => 'float:right;margin:5px;' :class => 'x-small-editor'}
+

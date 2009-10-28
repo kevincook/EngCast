@@ -7,3 +7,4 @@ Ajax.Base.prototype.initialize = Ajax.Base.prototype.initialize.wrap(
      this.options.parameters.authenticity_token = window._token || '';
    }
 );
+

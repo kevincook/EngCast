@@ -4,7 +4,7 @@ var ds;
 var App = new Ext.App({});
 
 var proxy = new Ext.data.HttpProxy({
-  url:'/engineers.js'
+  url:'/weeks.js'
 });
 
 var reader = new Ext.data.JsonReader(
@@ -16,19 +16,19 @@ var reader = new Ext.data.JsonReader(
   },
   [
     {name: 'id'},
-    {name: 'lastname'},
-    {name: 'firstname'},
-    {name: 'role'},
-    {name: 'manager_id'},
-    {name: 'created_at'},
-    {name: 'updated_at'}
+    {name: 'number'},
+    {name: 'startdate', type: 'date', dateFormat: 'Y-m-d\\TH:i:s\\z'},
+    {name: 'enddate', type: 'date', dateFormat: 'Y-m-d\\TH:i:s\\z'},
+    {name: 'created_at', type: 'date', dateFormat: 'Y-m-d\\TH:i:s\\z'},
+    {name: 'updated_at', type: 'date', dateFormat: 'Y-m-d\\TH:i:s\\z'},
+    {name: 'day_count'}
   ]
 );
   
 var writer = new Ext.data.JsonWriter();
 
 var store = new Ext.data.Store({
-  id: 'engineer',
+  id: 'week',
   restful: true,
   proxy: proxy,
   reader: reader,
@@ -43,51 +43,53 @@ var store = new Ext.data.Store({
 var userColumns = 
 [
   new Ext.grid.RowNumberer(),
-  { 
-    header: "Last Name",    
-    width: 60, 
-    dataIndex:'lastname',
+  {
+    xtype: 'datecolumn',
+    header: "Start Date",
+    format: 'm/d/y',
+    width: 60,
+    dataIndex: 'startdate',
     sortable: true,
-    editor: new Ext.form.TextField({})
-  },
-  { 
-    header: "First Name",   
-    width: 60, 
-    dataIndex:'firstname',
-    sortable: true,
-    editor: new Ext.form.TextField({})
-  },
-  { 
-    header: "Role",         
-    width: 60, 
-    dataIndex:'role',
-    sortable: true,
-    editor: new Ext.form.TextField({})
+    editor: {
+      xtype: 'datefield',
+      allowBlank: false,
+      minValue: '01/01/2009',
+      minText: "Can't have a date before Jan 2009",
+      maxValue: (new Date()).format('m/d/y')
+    }
   },
   {
-    header: 'Manager',
+    xtype: 'datecolumn',
+    header: "End Date",
+    format: 'm/d/y',
     width: 60,
-    dataIndex: 'manager_id',
+    dataIndex: 'enddate',
     sortable: true,
-    renderer: function(data){
-      record = dsManagers.getById(data);
-      if(record){
-        return record.data.first_name;
-      }
-    },
-    editor: new Ext.form.ComboBox({
-      typeAhead: false,
-      triggerAction: 'all',
-      lazyRender: true,
-      store: dsManagers,
-      displayField: 'first_name',
-      valueField: 'id'
-    })
+    renderer: Ext.util.Format.dateRenderer('m/d/Y'),
+    editor: {
+      xtype: 'datefield',
+      allowBlank: false,
+      minValue: '01/01/2009',
+      minText: "Cant't have a date before Jan 2009",
+      maxValue: (new Date()).format('m/d/y')
+    }
+  },
+  {
+    header: '# Days',
+    width: 60,
+    dataIndex: 'day_count',
+    sortable: true,
+    editor: {
+      xtype: 'numberfield',
+      allowBlank: false,
+      minValue: 0,
+      maxValue: 4,
+      minText: "Can't have a week with less than zero days",
+    }
   }
 ];
 
 store.load();
-dsManagers.load();
 
 Ext.onReady(function() {
   Ext.QuickTips.init();
@@ -97,21 +99,21 @@ Ext.onReady(function() {
   });
   
   var userGrid = new Ext.grid.GridPanel({
-    renderTo: 'engineer_grid',
+    renderTo: 'weeks_grid',
     iconCls: 'icon-grid',
     frame: true,
-    title: 'Engineers',
+    title: 'Weeks',
     autoScroll: true,
     height: 300,
     store: store,
     plugins: [editor],
     columns: userColumns,
     tbar: [{
-      text: 'Add Engineer',
+      text: 'Add Week',
       iconCls: 'icon-user-add',
       handler: onAdd
     }, '-', {
-      text: 'Remove Engineer',
+      text: 'Remove Week',
       iconCls: 'icon-user-delete',
       handler: onDelete
     }, '-'],
@@ -122,9 +124,10 @@ Ext.onReady(function() {
   
   function onAdd(btn, ev) {
     var u = new userGrid.store.recordType({
-      firstname: 'New',
-      lastname: 'Engineer',
-      role: 'SW'
+      number: 0,
+      startdate: '01/01/2009',
+      enddate: '01/01/2009',
+      day_count: 0
     });
     
     editor.stopEditing();

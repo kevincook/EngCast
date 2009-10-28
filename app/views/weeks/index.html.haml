@@ -1,0 +1,8 @@
+-content_for :jsinclude do
+  = javascript_include_tag 'weeks/weeks_grid.js'
+  = javascript_include_tag 'extjs/RowEditor.js'
+  = stylesheet_link_tag 'engineergrid.css'
+
+%h2 Listing Weeks
+
+#weeks_grid{ :style => "border:5px solid #99bbe8; overflow:hidden; height:300; width:650px;"}

@@ -1,0 +1,8 @@
+-content_for :jsinclude do
+  = javascript_include_tag 'managers/manager_grid.js'
+  = javascript_include_tag 'extjs/RowEditor.js'
+  = stylesheet_link_tag 'engineergrid.css'
+
+%h2 Listing Managers
+
+#manager_grid{ :style => "border:5px solid #99bbe8; overflow:hidden; height:300; width:650px;"}

@@ -1,44 +1,13 @@
 class ManagersController < ApplicationController
-  # GET /managers
-  # GET /managers.xml
   def index
-    @managers = Manager.find(:all, :order=>'last_name')
+    @managers = Manager.grid_data
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @managers }
+      format.js { render :json => @managers }
     end
   end
 
-  # GET /managers/1
-  # GET /managers/1.xml
-  def show
-    @manager = Manager.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @manager }
-    end
-  end
-
-  # GET /managers/new
-  # GET /managers/new.xml
-  def new
-    @manager = Manager.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @manager }
-    end
-  end
-
-  # GET /managers/1/edit
-  def edit
-    @manager = Manager.find(params[:id])
-  end
-
-  # POST /managers
-  # POST /managers.xml
   def create
     @manager = Manager.new(params[:manager])
 
@@ -54,8 +23,6 @@ class ManagersController < ApplicationController
     end
   end
 
-  # PUT /managers/1
-  # PUT /managers/1.xml
   def update
     @manager = Manager.find(params[:id])
 
@@ -71,8 +38,6 @@ class ManagersController < ApplicationController
     end
   end
 
-  # DELETE /managers/1
-  # DELETE /managers/1.xml
   def destroy
     @manager = Manager.find(params[:id])
     @manager.destroy

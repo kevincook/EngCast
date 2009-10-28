@@ -16,6 +16,19 @@ class Project < ActiveRecord::Base
   def qa_engineers
     engineers.find_all_by_role('QA')
   end
+
+  def self.grid_data
+    projects = find(:all, :order=>'name')
+    result = {}
+    result[:total] = projects.size
+    result[:rows] = projects.collect{|u|{
+      :id => u.id,
+      :name => u.name,
+      :created_at => u.created_at,
+      :updated_at => u.updated_at
+    }}
+    result
+  end
   
   def crosstab
     query = "select engineers.id, engineers.lastname, engineers.firstname, projects.id, COALESCE( projects.name,'UA') from engineers, weeks left outer join assignments on assignments.week_id = weeks.id and assignments.engineer_id = engineers.id left outer join projects on projects.id = assignments.project_id order by engineers.role, engineers.lastname, engineers.firstname, weeks.number"

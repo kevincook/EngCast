@@ -1,11 +1,6 @@
 %head
   = stylesheet_link_tag '../ext/resources/css/ext-all.css'
   = stylesheet_link_tag 'RowEditor.css'
-  /= stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
-  /= stylesheet_link_tag 'compiled/partials/_base.css'
-  /= stylesheet_link_tag 'compiled/print.css', :media => 'print'
-  /[if lt IE 8]
-    = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
   
   :javascript
     window._token = "#{form_authenticity_token}"
@@ -25,8 +20,4 @@
     
 %body.blueprint#index
   .container
-    .header#header
-    = render :partial => 'layouts/header'
-    .menu#menu= render :partial => 'layouts/menu'
     .content#content= yield
-    .footer#footer= render :partial => 'layouts/footer'
